@@ -50,7 +50,7 @@ export default function Home() {
 
         <ul>
           <li>Email: <a href="mailto:hello@erikpanchenko.dev">hello@erikpanchenko.dev</a></li>
-          <li>LinkedIn: <a href="https://linkedin.com/in/YOUR_HANDLE">LinkedIn</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/erik-panchenko/">linkedin.com/in/erik-panchenko/</a></li>
         </ul>
       </section>
     </article>
