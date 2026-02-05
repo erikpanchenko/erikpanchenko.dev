@@ -27,7 +27,7 @@ export default function Home() {
     <article className="prose">
       <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
 
-      <h2>Latest blog posts</h2>
+      {/* <h2>Latest blog posts</h2>
 
       <ul className="post-list">
         {latest.map((p) => (
@@ -38,7 +38,7 @@ export default function Home() {
             </Link>
           </li>
         ))}
-      </ul>
+      </ul> */}
 
       <section className="contact-block">
         <h2>Contact</h2>
