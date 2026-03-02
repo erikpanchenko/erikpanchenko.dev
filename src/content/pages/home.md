@@ -26,6 +26,5 @@ I work hands-on with teams to ensure their data foundations are reliable, compli
 - **Data layer & Tracking Design**  
   Scalable event and attribute models teams can actually govern
 
-- **Tealium CDP Clean-ups & Remediation**  
+- **[Tealium CDP Clean-ups & Remediation](/cdp-cleanup)**  
   Auditing, simplifying, and reducing event volume in mature Tealium accounts  
-  [How it works →](/cdp-cleanup)
