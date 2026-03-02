@@ -5,6 +5,7 @@ import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 
 import { postsBySlug } from "../posts/posts.js";
+import { usePageMeta } from "../lib/usePageMeta.js";
 
 // Load all blog markdown files at build-time (Vite)
 const mdFiles = import.meta.glob("../content/blog/*.md", {
@@ -21,6 +22,26 @@ function getRawByFilename(filename) {
 export default function BlogPost() {
   const { slug } = useParams();
   const post = postsBySlug[slug];
+
+  let title = "Post Not Found | Erik Panchenko";
+  let description = "The requested blog post could not be found.";
+
+  if (post) {
+    const raw = getRawByFilename(post.file);
+
+    if (raw) {
+      const parsed = fm(raw);
+      const data = parsed.attributes || {};
+
+      title = `${data.title || post.title} | Erik Panchenko`;
+      description = data.description || post.description || "";
+    }
+  }
+
+  usePageMeta({
+    title,
+    description,
+  });
 
   if (!post) {
     return (
@@ -54,7 +75,7 @@ export default function BlogPost() {
   const data = parsed.attributes || {};
   const body = parsed.body || "";
 
-  const title = data.title || post.title;
+  const titleText = data.title || post.title;
   const date = data.date || post.date;
 
   return (
@@ -63,8 +84,8 @@ export default function BlogPost() {
         <Link to="/blog" className="text-link">← Back to Blog</Link>
       </p>
 
-      <h1>{title}</h1>
       <p className="post-meta">{date}</p>
+      <h1>{titleText}</h1>
 
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}

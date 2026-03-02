@@ -1,7 +1,7 @@
 import fm from "front-matter";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
+import rehypeRaw from "rehype-raw"; 
 import raw from "../content/pages/home.md?raw";
 import { usePageMeta } from "../lib/usePageMeta.js";
 import { Link } from "react-router-dom";
