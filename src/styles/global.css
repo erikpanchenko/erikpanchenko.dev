@@ -288,17 +288,18 @@ a:hover{
 }
 
 .post-link__meta{
-  color: var(--muted);
+  color: var(--text);
   font-size: var(--step--1);
   white-space: nowrap;
   text-decoration: none;
+  padding-top: 0.3rem;
 }
 
 .post-heading{
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 0.5rem;
-  flex-wrap: wrap;
   margin-bottom: 0.75rem;
 }
 
@@ -309,7 +310,7 @@ a:hover{
 .post-meta{
   color: var(--muted);
   font-size: var(--step--1);
-  margin: 0 0 0.5rem !important;
+  margin: 0 0 0.7rem !important;
   white-space: nowrap;
 }
 

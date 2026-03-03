@@ -1,12 +1,12 @@
 ---
-title: "Reducing Tealium Visitor Attributes from 700 to 350: A Practical Optimisation Pattern"
+title: "Reducing Tealium Visitor Attributes from 700 to 350"
 description: "A practical optimisation pattern for mature Tealium AudienceStream implementations that reduces attribute sprawl and improves performance without sacrificing functionality."
 date: "20 Sep 2025"
 ---
 
 I have recently completed a Tealium clean-up project for a major airline in Australia. Their AudienceStream implementation was quite mature, built up over many years, with several abandoned components and unclear ownership.
 
-Trimary issue we were addressing what the number of visitor attributes — the account had over 700, which was causing noticeable UI slowdowns (Tealium recommends keeping it under 500).
+The primary issue we were addressing what the total number of visitor attributes — the account had over 700, which was causing noticeable UI slowdowns (Tealium recommends keeping it under 500).
 
 Beyond the obvious identification and removal of unused attributes, I have discovered a very effective optimisation pattern that allowed us to additionally nearly halve the overall attribute count. Although very simple in hindsight, it wasn’t obvious at first, so I thought I’d share it here for anyone going through a similar exercise.
 
@@ -14,7 +14,7 @@ Beyond the obvious identification and removal of unused attributes, I have disco
 
 The first and most obvious step was to identify and remove unused attributes. Attributes with no dependencies can usually be deleted safely. A quick way to check is to click the delete button on an attribute. If a simple confirmation dialog appears, it has no dependencies and can be deleted. If a dependency warning appears, it is being used somewhere and should not be deleted.
 
-This step allowed us to remove 60 unused attributes, but in our case it was not enough.
+This step allowed us to remove 50 unused attributes, but in our case it was not enough.
 
 ## The pattern: One use case, many badges
 
@@ -41,6 +41,6 @@ This pattern was not limited to upcoming flights. There were several other use c
 The result was not only a significantly leaner data model, but also a noticeably more responsive and stable UI.
 
 If you are going through a similar clean-up exercise, this type of consolidation is often where the largest gains can be found with relatively small effort.
+<br><br>
 
-
-_This article was originally cross-posted to the [Tealium Community](https://community.tealiumiq.com)._
+_This article was originally posted at [Tealium Community](https://community.tealiumiq.com)._
