@@ -20,7 +20,7 @@ This step allowed us to remove 60 unused attributes, but in our case it was not 
 
 When analysing the remaining attributes, a clear pattern candidate for optimisation emerged: there were multiple groups of badge attributes built around the same use case, each differing only by a single parameter.
 
-For example, the airline had a series of badges assigned to customers with upcoming flights to specific destinations: Sydney, San Francisco, Tokyo... There were 35 destination badges, one for each major destination. Each badge was used as a condition in a corresponding audience, which then triggered a destination-specific connector.
+For example, the airline had a series of badges assigned to customers with upcoming flights to specific destinations: Tokyo, Sydney, London, ... There were 38 such badges, one for each major destination. Each badge was used as a condition in a corresponding audience, which then triggered a destination-specific connector.
 
 ![Tealium visitor attributes reduction pattern - before](/images/reducing-tealium-visitor-attributes-optimisation-pattern-before.png)
 
