@@ -80,12 +80,14 @@ export default function BlogPost() {
 
   return (
     <article className="prose">
-      <p className="kicker">
+      {/* <p className="kicker">
         <Link to="/blog" className="text-link">← Back to Blog</Link>
-      </p>
+      </p> */}
 
-      <p className="post-meta">{date}</p>
-      <h1>{titleText}</h1>
+      <header className="post-heading">
+        <h1>{titleText}</h1>
+        <p className="post-meta">{date}</p>
+      </header>
 
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
@@ -93,6 +95,19 @@ export default function BlogPost() {
       >
         {body}
       </ReactMarkdown>
+      <section className="contact-block">
+        <h2>Contact</h2>
+
+        <p>
+          If you need help with Tealium CDP architecture, identity strategy,
+          or a clean-up project, get in touch:
+        </p>
+
+        <ul>
+          <li>Email: <a href="mailto:hello@erikpanchenko.dev">hello@erikpanchenko.dev</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/erik-panchenko/">linkedin.com/in/erik-panchenko/</a></li>
+        </ul>
+      </section>
     </article>
   );
 }

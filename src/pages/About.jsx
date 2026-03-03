@@ -3,16 +3,16 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 
-import raw from "../content/pages/cdp-cleanup.md?raw";
+import raw from "../content/pages/about.md?raw";
 import { usePageMeta } from "../lib/usePageMeta.js";
 
-export default function CdpCleanup() {
+export default function About() {
   const parsed = fm(raw);
   const data = parsed.attributes || {};
   const content = parsed.body || "";
 
   usePageMeta({
-    title: data.title || "Tealium CDP Clean-ups & Remediation",
+    title: data.title || "About | Erik Panchenko",
     description: data.description || "",
   });
 
@@ -24,15 +24,6 @@ export default function CdpCleanup() {
       >
         {content}
       </ReactMarkdown>
-
-      <section className="contact-block">
-        <h2>Contact</h2>
-
-        <ul>
-          <li>Email: <a href="mailto:hello@erikpanchenko.dev">hello@erikpanchenko.dev</a></li>
-          <li>LinkedIn: <a href="https://www.linkedin.com/in/erik-panchenko/">linkedin.com/in/erik-panchenko/</a></li>
-        </ul>
-      </section>
     </article>
   );
 }

@@ -24,7 +24,7 @@ export default function Home() {
   });
 
   return (
-    <article className="prose">
+    <article className="prose prose--home">
       <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
 
       {/* <h2>Latest blog posts</h2>
@@ -43,10 +43,10 @@ export default function Home() {
       <section className="contact-block">
         <h2>Contact</h2>
 
-        <p>
-          If you want help with a Tealium/CDP audit, consent architecture,
+        {/* <p>
+          If you need help with Tealium CDP architecture, identity strategy,
           or a clean-up project, get in touch:
-        </p>
+        </p> */}
 
         <ul>
           <li>Email: <a href="mailto:hello@erikpanchenko.dev">hello@erikpanchenko.dev</a></li>

@@ -1,7 +1,7 @@
 ---
 title: "Reducing Tealium Visitor Attributes from 700 to 350: A Practical Optimisation Pattern"
 description: "A practical optimisation pattern for mature Tealium AudienceStream implementations that reduces attribute sprawl and improves performance without sacrificing functionality."
-date: "2025-09-20"
+date: "20 Sep 2025"
 ---
 
 I have recently completed a Tealium clean-up project for a major airline in Australia. Their AudienceStream implementation was quite mature, built up over many years, with several abandoned components and unclear ownership.
@@ -20,16 +20,9 @@ This step allowed us to remove 60 unused attributes, but in our case it was not 
 
 When analysing the remaining attributes, a clear pattern candidate for optimisation emerged: there were multiple groups of badge attributes built around the same use case, each differing only by a single parameter.
 
-For example, the airline had a series of badges assigned to customers with upcoming flights to specific destinations:
+For example, the airline had a series of badges assigned to customers with upcoming flights to specific destinations: Sydney, San Francisco, Tokyo... There were 35 destination badges, one for each major destination. Each badge was used as a condition in a corresponding audience, which then triggered a destination-specific connector.
 
-- Upcoming flight to Sydney  
-- Upcoming flight to San Francisco  
-- Upcoming flight to Tokyo  
-- [...]
-
-There were 35 such badges, one for each major destination. Each badge was used as a condition in a corresponding audience, which then triggered a destination-specific connector.
-
-![Short, descriptive text](/images/reducing-tealium-visitor-attributes-optimisation-pattern-before.png)
+![Tealium visitor attributes reduction pattern - before](/images/reducing-tealium-visitor-attributes-optimisation-pattern-before.png)
 
 Tealium’s training materials recommend this approach, so it is very common and is fine for smaller implementations. However, as the number of attributes grows over time, this becomes a great candidate for optimisation.
 
@@ -39,7 +32,7 @@ The solution was pretty simple but required a bit of effort and care to implemen
 
 The related audiences were then restructured to check whether that Set of Strings contains a specific destination value, rather than checking whether an individual destination badge is assigned.
 
-![Short, descriptive text](/images/reducing-tealium-visitor-attributes-optimisation-pattern-after.png)
+![Tealium visitor attributes reduction pattern - after](/images/reducing-tealium-visitor-attributes-optimisation-pattern-after.png)
 
 ## Result
 
