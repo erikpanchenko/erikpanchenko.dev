@@ -9,11 +9,11 @@ description: "Customer Data Platform strategy and implementation with a focus on
   class="home-portrait"
 />
 
-Hi, I'm Erik, a Senior Implementation Engineer focused on CDP architecture, data strategy and consent-aware measurement.
+Hi, I'm Erik, a Senior MarTech Engineer focused on CDP architecture, data strategy and consent-aware measurement and activation.
 
-I help organisations design, implement and fix Customer Data Platforms, with a strong focus on Tealium-based ecosystems, consent orchestration and long-term data governance.
+I help organisations design, implement and fix Customer Data Platforms, with a strong focus on Tealium-based ecosystems, scalability and long-term data governance.
 
-I work hands-on with teams to ensure their data foundations are reliable, compliant, and actually usable — not just technically “working”.
+I work hands-on with teams to ensure their data foundations are reliable, compliant, and actually usable and thought through — not just technically “working”.
 
 ## What I help with
 
@@ -27,4 +27,4 @@ I work hands-on with teams to ensure their data foundations are reliable, compli
   Scalable event and attribute models teams can actually govern
 
 - **[Tealium CDP Clean-ups & Remediation](/cdp-cleanup)**  
-  Auditing, simplifying, and reducing event volume in mature Tealium accounts  
+  Auditing, simplifying, and optimising existing Tealium implementations  
