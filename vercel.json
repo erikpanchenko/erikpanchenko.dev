@@ -1,3 +1,20 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "rewrites": [
+    {
+      "source": "/BalticFoodCo/Lestena",
+      "destination": "/BalticFoodCo/Lestena/index.html"
+    },
+    {
+      "source": "/BalticFoodCo/Lestena/",
+      "destination": "/BalticFoodCo/Lestena/index.html"
+    },
+    {
+      "source": "/BalticFoodCo/Lestena/index.html",
+      "destination": "/BalticFoodCo/Lestena/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
 }
